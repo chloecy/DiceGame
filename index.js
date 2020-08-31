@@ -10,13 +10,9 @@ const randomImageSource2 = "./images/dice" + randomNumber2 + ".png";
 
 document.querySelectorAll("img")[1].setAttribute("src", randomImageSource2);
 
-const refreshButton = document.querySelector('.btn');
-
-const refreshPage = () => {
+document.querySelector(".btn").addEventListener("click", function () {
   window.location.reload();
-}
-
-refreshButton.addEventListener('click', refreshPage);
+});
 
 if (randomNumber1 > randomNumber2) {
 	document.querySelector("h1").innerHTML = "Player 1 Wins!";
